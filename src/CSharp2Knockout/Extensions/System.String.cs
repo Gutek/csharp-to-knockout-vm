@@ -16,7 +16,7 @@ namespace CSharp2Knockout.Extensions
 {
     public static class StringExtensions
     {
-        public static object ToKnockout(this string @this)
+        public static object ToKnockout(this string @this, bool onlyPublic, bool publicGetter, bool includeEnums, bool includeDataIf)
         {
             if(string.IsNullOrWhiteSpace(@this))
             {
@@ -47,10 +47,10 @@ namespace CSharp2Knockout.Extensions
                     };
                 }
 
-                var types = cu.GetUsableTypes();
+                var types = cu.GetUsableTypes(includeEnums);
                 foreach(var type in types)
                 {
-                    var members = type.GetProperties();
+                    var members = type.GetProperties(onlyPublic, publicGetter);
                     dynamic expando = members.SetMembers();
 
                     var serialized = JsonConvert.SerializeObject(expando, Formatting.Indented, new JsonSerializerSettings

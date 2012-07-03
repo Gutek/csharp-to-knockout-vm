@@ -179,7 +179,19 @@
 
         var code = $.trim($("#csharp").val()),
             loading = $('#loading'),
-            url = $this.data().url, post;
+            url = $this.data().url, post,
+            includeEnums = $('#includeEnums').is(":checked"),
+            publicOnly = $('#publicOnly').is(":checked"),
+            publicGetter = $('#publicGetter').is(":checked"),
+            dataIf = $('#dataIf').is(":checked"),
+            model = {
+                csharp: code,
+                onlyPublic: publicOnly,
+                publicGetter: publicGetter,
+                includeEnums: includeEnums,
+                includeDataIf: dataIf
+            };
+
 
         if (code.length === 0) {
             clearTimeout(findoutTimeout);
@@ -195,7 +207,7 @@
 
         loading.show();
 
-        post = $.post(url, { csharp: code }, function (data) {
+        post = $.post(url, model, function (data) {
             var vm = '', errors = '', temp;
             if (!data.success) {
                 Alerts.msg.error(getErros(data), ' ');
@@ -223,6 +235,8 @@
         });
 
     });
+
+    $('[rel=popover]').popover();
 
     window.Allerts = Alerts.msg;
 

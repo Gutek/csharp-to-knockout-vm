@@ -8,14 +8,41 @@
                 </div>
                 <div id="options" class="accordion-body collapse">
                     <div class="accordion-inner">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
-                        ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food
-                        truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put
-                        a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                        keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                        Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                        raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                        labore sustainable VHS.
+                        <div class="row">
+                            <div class="span2">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="publicOnly" value="publicOnly" checked="checked">
+                                    Only public Properties
+                                </label>
+                            </div>
+                            <div class="span2">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="publicGetter" value="publicGetter" checked="checked">
+                                    Only with public Getter
+                                </label>
+                            </div>
+                            <div class="span2">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="includeEnums" value="includeEnums">
+                                    Include Enums
+                                </label>
+                                <p class="help-block">
+                                    <strong>Note:</strong> Not yet implemented.
+                                </p>
+                            </div>
+                            <div class="span2">
+                                <label class="checkbox" 
+                                       rel="popover" 
+                                       data-original-title="Generating default initializers" 
+                                       data-content="If selected, <code>if (data) { data = {} }</code> will be converted to initialize view model if data exists: <code>if (!data) { self.x = ko.observable() }</code>">
+                                    <input type="checkbox" id="dataIf" value="dataIf">
+                                    Include data If
+                                </label>
+                                <p class="help-block">
+                                    <strong>Note:</strong> Not yet implemented.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

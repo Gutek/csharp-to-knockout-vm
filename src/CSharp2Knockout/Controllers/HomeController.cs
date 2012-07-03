@@ -12,9 +12,14 @@ namespace CSharp2Knockout.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Index(string csharp)
+        public ActionResult Index(string csharp, bool? onlyPublic, bool? publicGetter, bool? includeEnums, bool? includeDataIf)
         {
-            var result = csharp.ToKnockout();
+            var result = csharp.ToKnockout(
+                onlyPublic.OrDefault(true)
+                , publicGetter.OrDefault(true)
+                , includeEnums.OrDefault(false)
+                , includeDataIf.OrDefault(false)
+            );
 
             return Json(result);
         }
