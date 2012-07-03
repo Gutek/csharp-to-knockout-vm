@@ -173,9 +173,13 @@
     $('#generate').click(function (evt) {
         evt.preventDefault();
 
+        var $this = $(this);
+
+        $this.button('loading');
+
         var code = $.trim($("#csharp").val()),
             loading = $('#loading'),
-            url = $(this).data().url, post;
+            url = $this.data().url, post;
 
         if (code.length === 0) {
             clearTimeout(findoutTimeout);
@@ -184,6 +188,8 @@
                 $("#no-csharp").fadeOut("slow");
             }, 4e3);
 
+            $this.button('reset');
+            $this.button('toggle');
             return;
         }
 
@@ -211,6 +217,8 @@
         });
 
         post.complete(function () {
+            $this.button('reset');
+            $this.button('toggle');
             loading.hide();
         });
 

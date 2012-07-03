@@ -67,17 +67,17 @@ namespace CSharp2Knockout.Extensions
 
                     JObject o = JObject.Parse(serialized);
                     StringBuilder sb = new StringBuilder();
-                    sb.AppendFormat("var {0} = function(data) {{", type.Name);
+                    sb.AppendFormat("var {0} = function (data) {{", type.Name);
                     sb.AppendLine();
                     sb.AppendLine("     var self = this;");
                     sb.AppendLine();
                     sb.AppendLine("     if (!data) {");
                     sb.AppendLine("         data = { };");
                     sb.AppendLine("     }");
-                    sb.AppendLine();
 
                     foreach(var item in o.Children())
                     {
+                        sb.AppendLine();
                         var property = item.ToObject<JProperty>();
 
                         if(o[property.Name] is JArray)
@@ -88,12 +88,9 @@ namespace CSharp2Knockout.Extensions
                         {
                             sb.AppendFormat("   self.{0} = ko.observable(data.{0});", property.Name);
                         }
-                        sb.AppendLine();
-
                     }
 
                     sb.AppendLine("};");
-                    sb.AppendLine();
 
                     result.AppendLine(sb.ToString());
                 }
