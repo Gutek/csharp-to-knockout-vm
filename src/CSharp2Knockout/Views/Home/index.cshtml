@@ -1,0 +1,34 @@
+﻿
+<div class="row">
+    
+    <div class="span12">
+        
+        <textarea id="csharp" rows="10" placeholder="Enter or Paste C# Class"></textarea>
+
+    </div>
+
+</div>
+<div class="row">
+    <div class="span7">
+        <button id="generate" class="btn btn-primary btn-large" data-url="@Url.Action("Index")">
+            Generate
+        </button>
+        
+        <img id="loading" style="display: none;" src="@Url.Content("~/Content/images/ajax-loader.gif")" alt="Generating Knockout JS View Model">
+        <span id="no-csharp" class="help-inline" style="display: none;">
+            I see dead code - add some and try again
+        </span>
+    </div>
+    <div class="span5 right">
+        @*<button class="btn large" id="show-about" rel="twipsy" data-original-title="about / info">
+            ?</button>
+        <button class="btn large" id="show-feedback" rel="twipsy" data-original-title="i love feedback!">
+            !</button>*@
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="span12 alerts">
+    </div>
+</div>
