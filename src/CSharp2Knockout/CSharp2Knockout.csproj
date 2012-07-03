@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DeployIisAppPath>Default Web Site/c2kjs</DeployIisAppPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DeployIisAppPath>Default Web Site/c2kjs</DeployIisAppPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.NRefactory">
@@ -126,6 +128,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Extensions\CompilationUnitExtensions.cs" />
+    <Compile Include="Extensions\PropertyDeclarationExtensions.cs" />
+    <Compile Include="Extensions\TypeDeclarationExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -142,6 +147,7 @@
     <Content Include="Content\images\bg-footer-credits.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\webio.png" />
     <Content Include="Content\prettify.css" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
@@ -162,6 +168,13 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
+    <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Http.WebHost.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Http.SelfHost.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Http.dll" />
+    <None Include="_bin_deployableAssemblies\System.Net.Http.WebRequest.dll" />
+    <None Include="_bin_deployableAssemblies\System.Net.Http.Formatting.dll" />
+    <None Include="_bin_deployableAssemblies\System.Net.Http.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

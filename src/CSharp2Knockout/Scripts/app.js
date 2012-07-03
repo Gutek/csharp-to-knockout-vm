@@ -190,22 +190,24 @@
         loading.show();
 
         post = $.post(url, { csharp: code }, function (data) {
-            var vm = '', errors = '';
+            var vm = '', errors = '', temp;
             if (!data.success) {
                 Alerts.msg.error(getErros(data), ' ');
                 return;
             }
 
+            temp = prettyPrintOne(data.message, 'js', true);
+
             vm += '<pre class="prettyprint linenums">';
-            vm += data.message;
+            vm += temp;
             vm += '</pre>';
 
-            if (data.errors) {
+            if (data.errors && data.errors.length) {
                 Alerts.msg.error(getErros(data), ' ');
             }
 
             Alerts.msg.info(vm, ' ');
-            prettyPrint();
+            //prettyPrint();
         });
 
         post.complete(function () {

@@ -3,11 +3,16 @@
 }
 
 .credits {
-    background-image: url('images/bg-footer-credits.png');
-    width: 135px;
-    height: 43px;
+    background-image: url('images/webio.png');
+    width: 145px;
+    height: 30px;
 }
 
+.credits-app {
+background-image: url('images/bg-footer-credits.png');
+width: 135px;
+height: 43px;
+}
 
 textarea {
     width: 100%;

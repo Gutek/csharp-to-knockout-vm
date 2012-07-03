@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="https://ssl7.webio.pl:8172/msdeploy.axd" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="gutek.pl/c2kjs" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Webio" publishMethod="MSDeploy" replaceMatchingFiles="True" userName="gutek" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxz2cVAmFJk+PC0SHqWxO3AAAAAACAAAAAAAQZgAAAAEAACAAAABqsAW8RRVSp3nycaRo3gDgIALDdBmblUZ6h1gYo4KtlAAAAAAOgAAAAAIAACAAAACVP/u/+tpCBxzfYDhEMg7dAZ5NCu44+L9mu/xgx7GTEiAAAACXJU2ZYFzYimEJlt5vSXtXd9MeqZds73oIKK2EOU0fiEAAAAAU11sxb+YAmryD0Uq3Z0KFKTznh00nMkK5XbdA3EHE7B1aMNFFOrsB44tP6RbZfpoZ6Abphl3B/yggjjZzUJAA" SelectedForPublish="True" />
+</publishData>

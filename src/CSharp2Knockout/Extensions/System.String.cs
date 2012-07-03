@@ -34,61 +34,24 @@ namespace CSharp2Knockout.Extensions
                 var parser = new CSharpParser();
                 var cu = parser.Parse(textReader, "dummy.cs");
 
-                var errors = new List<string>();
+                bool shouldExit;
+                var errors = cu.GetErrors(out shouldExit);
 
-                if(cu.Errors != null && cu.Errors.Count > 0)
+                if(shouldExit)
                 {
-                    foreach(var error in cu.Errors)
+                    return new
                     {
-                        var line = string.Empty;
-                        if(error.ErrorType == ErrorType.Warning)
-                        {
-                            line += "<strong>Warning</strong>: ";
-                        }
-                        else
-                        {
-                            line += "<strong>Error</strong>: ";
-                        }
-
-                        line += error.Message;
-                        errors.Add(line);
-                    }
-
-                    if(cu.Errors.Any(x => x.ErrorType == ErrorType.Error))
-                    {
-                        return new
-                        {
-                            success = false,
-                            message = "Error parsning code file",
-                            errors = errors
-                        };
-
-                    }
+                        success = false,
+                        message = "Error parsning code file",
+                        errors = errors
+                    };
                 }
 
-                var types = cu.GetTypes(true);
+                var types = cu.GetUsableTypes();
                 foreach(var type in types)
                 {
-                    var members = type
-                        .GetChildrenByRole(Roles.TypeMemberRole)
-                        .Where(x => x.NodeType == NodeType.Member && x is PropertyDeclaration)
-                        .Cast<PropertyDeclaration>();
-
-                    dynamic expando = new ExpandoObject();
-                    var dict = expando as IDictionary<string, object>;
-
-                    foreach(var member in members)
-                    {
-                        var text = member.ReturnType.GetText();
-                        if(text.IsArray())
-                        {
-                            dict[member.Name] = new int[0];
-                        }
-                        else
-                        {
-                            dict[member.Name] = null;
-                        }
-                    }
+                    var members = type.GetProperties();
+                    dynamic expando = members.SetMembers();
 
                     var serialized = JsonConvert.SerializeObject(expando, Formatting.Indented, new JsonSerializerSettings
                     {

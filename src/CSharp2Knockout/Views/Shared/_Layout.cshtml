@@ -62,14 +62,28 @@
         <footer>
             <div class="row">
                 <div class="span6">
-                    <p>
-                        &copy; Jakub Gutkowski @DateTime.Now.Year
-                    </p>
+                    <ul class="unstyled">
+                        <li>&copy; Jakub Gutkowski @DateTime.Now.Year</li>
+                        <li>Design by: <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></li>
+                        <li>Idea taken from: <a href="http://json2csharp.com/">json2csharp</a></li>
+                    </ul>
                 </div>
                 <div class="span6">
-                    <a href="http://appharbor.com" title="AppHarbor">
-                        <div class="credits pull-right"></div>
-                    </a>
+                    @if(false)
+                    {
+                         <a href="http://webio.pl" title="Webio">
+                            <div class="credits pull-right">
+                            </div>
+                        </a>
+                    } 
+                    else
+                    {
+                        <a href="http://appharbor.com" title="AppHarbor">
+                            <div class="credits-app pull-right">
+                            </div>
+                        </a>
+                    }
+                    
                 </div>
             </div>
             
