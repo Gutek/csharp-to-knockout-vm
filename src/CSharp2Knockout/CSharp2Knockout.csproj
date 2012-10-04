@@ -62,6 +62,12 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.4.5.7\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.0.0.2000\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extended">
+      <HintPath>..\packages\NLog.Extended.2.0.0.2000\lib\net40-full\NLog.Extended.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -127,9 +133,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionResults\JsonNetResult.cs" />
+    <Compile Include="Services\ICodeConvertion.cs" />
+    <Compile Include="Services\KnockoutWritter.cs" />
+    <Compile Include="Services\NRefactory\NRefactoryCodeTextExtensions.cs" />
+    <Compile Include="Services\NRefactory\NRefactoryCodeConvertion.cs" />
+    <Compile Include="Services\TranslateOptions.cs" />
+    <Content Include="Content\codemirror.css" />
+    <Content Include="Content\images\apple-touch-icon.png" />
+    <Content Include="App_Data\placeholder.txt" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extensions\CompilationUnitExtensions.cs" />
+    <Compile Include="Extensions\EnumMemberDeclarationExtensions.cs" />
     <Compile Include="Extensions\PropertyDeclarationExtensions.cs" />
+    <Compile Include="Extensions\TranslateOptionsExtensions.cs" />
     <Compile Include="Extensions\TypeDeclarationExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -150,10 +167,13 @@
     <Content Include="Content\images\webio.png" />
     <Content Include="Content\prettify.css" />
     <Content Include="Content\site.css" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\clike.js" />
+    <Content Include="Scripts\codemirror.js" />
     <Content Include="Scripts\html5.js" />
     <Content Include="Scripts\jquery-1.7.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
@@ -168,7 +188,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Compile Include="Extensions\System.Bool.cs" />
+    <Content Include="NLog.config" />
     <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
     <None Include="_bin_deployableAssemblies\System.Web.Http.WebHost.dll" />
     <None Include="_bin_deployableAssemblies\System.Web.Http.SelfHost.dll" />
@@ -177,10 +197,7 @@
     <None Include="_bin_deployableAssemblies\System.Net.Http.Formatting.dll" />
     <None Include="_bin_deployableAssemblies\System.Net.Http.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -195,6 +212,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\System.String.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gutek.Common\Gutek.Common.csproj">
+      <Project>{33E6AC65-94D2-42D9-8ABD-42F41B09299D}</Project>
+      <Name>Gutek.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

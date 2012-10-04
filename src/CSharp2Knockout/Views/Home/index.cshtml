@@ -1,5 +1,4 @@
-﻿
-<div class="row" style="padding-top: 30px">
+﻿<div class="row" style="padding-top: 30px">
     <div class="span12">
         <div class="accordion" id="accordion">
             <div class="accordion-group">
@@ -9,53 +8,75 @@
                 <div id="options" class="accordion-body collapse">
                     <div class="accordion-inner">
                         <div class="row">
-                            <div class="span2">
+                            <div class="span4">
                                 <label class="checkbox">
                                     <input type="checkbox" id="publicOnly" value="publicOnly" checked="checked">
                                     Only public Properties
                                 </label>
                             </div>
-                            <div class="span2">
+                            <div class="span4">
                                 <label class="checkbox">
                                     <input type="checkbox" id="publicGetter" value="publicGetter" checked="checked">
                                     Only with public Getter
                                 </label>
                             </div>
-                            <div class="span2">
+                            <div class="span3">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="sortProps" value="sortProps">
+                                    Sort properties alphabetically
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span4">
+                                <label class="checkbox" rel="popover" data-original-title="Generating default initializers"
+                                    data-content="If selected, generated ko will look like <code>if (data) { /**/ } else { /*init with defaults*/ }</code>">
+                                    <input type="checkbox" id="includeDefaultData" value="includeDefaultData">
+                                    Include Default Data
+                                </label>
+                            </div>
+                            <div class="span4">
                                 <label class="checkbox">
                                     <input type="checkbox" id="includeEnums" value="includeEnums">
                                     Include Enums
                                 </label>
-                                <p class="help-block">
-                                    <strong>Note:</strong> Not yet implemented.
-                                </p>
                             </div>
-                            <div class="span2">
-                                <label class="checkbox" 
-                                       rel="popover" 
-                                       data-original-title="Generating default initializers" 
-                                       data-content="If selected, <code>if (data) { data = {} }</code> will be converted to initialize view model if data exists: <code>if (!data) { self.x = ko.observable() }</code>">
-                                    <input type="checkbox" id="dataIf" value="dataIf">
-                                    Include data If
+                            <div class="span3">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="includeEmptyType" value="includeEmptyType">
+                                    Include empty types
                                 </label>
-                                <p class="help-block">
-                                    <strong>Note:</strong> Not yet implemented.
-                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span4">
+                                <label class="checkbox" rel="popover" data-original-title="Use camelCase for ko instead of C# class Property name"
+                                    data-content="If selected, C# class properties Names will not be changed, but ko properties will be translated to <code>camelCase</code>.">
+                                    <input type="checkbox" id="camelCase" value="camelCase" checked="checked">
+                                    Use camelCase for ko
+                                </label>
+                            </div>
+                            <div class="span3">
+                                <label class="checkbox" rel="popover" data-original-title="Use camelCase on everything"
+                                    data-content="If selected, C# class and ko properties Names will be transleted to <code>camelCase</code>.">
+                                    <input type="checkbox" id="forceCamelCase" value="forceCamelCase">
+                                    Use camelCase for everything
+                                </label>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
 <div class="row">
     
     <div class="span12">
-        
-        <textarea id="csharp" rows="10" placeholder="Enter or Paste C# Class"></textarea>
+        <div class="editor">    
+            <textarea id="csharp" rows="10" placeholder="Enter or Paste C# Class">// Your code goes here.</textarea>
+        </div>
 
     </div>
 

@@ -11,10 +11,37 @@ namespace CSharp2Knockout.Extensions
             var types = @this.GetChildrenByRole(Roles.TypeMemberRole)
                        .Where(x => x.NodeType == NodeType.Member
                            && x is PropertyDeclaration)
-                       .Cast<PropertyDeclaration>()
-                       .Where(x => !publicOnly || (x.Modifiers == Modifiers.Public && publicOnly))
-                       .Where(x => !withPublicGetter || ((x.Getter.Modifiers == Modifiers.None || x.Getter.Modifiers == Modifiers.Public) && withPublicGetter && !x.Getter.IsNull))
-                       .ToList();
+                       .Cast<PropertyDeclaration>();
+
+            if(publicOnly)
+            {
+                types = types.Where(x => x.Modifiers == Modifiers.Public
+                                 || x.Modifiers == (Modifiers.Public | Modifiers.Virtual)
+                                 || x.Modifiers == (Modifiers.Public | Modifiers.New)
+                                 || x.Modifiers == (Modifiers.Public | Modifiers.Override)
+                                 || x.Modifiers == (Modifiers.Public | Modifiers.Abstract)
+                                 || x.Modifiers == (Modifiers.Public | Modifiers.Sealed));
+            }
+
+            if(withPublicGetter)
+            {
+                types =
+                    types.Where(
+                        x =>
+                        (x.Getter.Modifiers == Modifiers.None || x.Getter.Modifiers == Modifiers.Public) &&
+                        !x.Getter.IsNull);
+            }
+
+            return types;
+        }
+
+        public static IEnumerable<EnumMemberDeclaration> GetEnums(this TypeDeclaration @this)
+        {
+            var types = @this.GetChildrenByRole(Roles.TypeMemberRole)
+                       .Where(x => x.NodeType == NodeType.Member
+                           && x is EnumMemberDeclaration)
+                       .Cast<EnumMemberDeclaration>()
+                       ;
 
             return types;
         }

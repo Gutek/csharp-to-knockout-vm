@@ -1,0 +1,7 @@
+﻿namespace CSharp2Knockout.App_Data
+{
+    public class placeholder
+    {
+         
+    }
+}

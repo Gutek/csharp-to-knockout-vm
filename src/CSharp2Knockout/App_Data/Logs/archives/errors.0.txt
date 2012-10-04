@@ -1,0 +1,342 @@
+07-17 12:05:24 | [Error] | CSharp2Knockout.Controllers.HomeController
+IP: [::1 | ::1],browser: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.41 Safari/537.1
+referer: http://localhost:9843/
+Thread: 34 | User: auth:NTLM:Gutek-PC\Gutek | ControllerActionInvoker.InvokeExceptionFilters => Controller.System.Web.Mvc.IExceptionFilter.OnException => HomeController.OnException 
+ Error occured on controller, handling it as AjaxResult 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: compilationUnit
+   at ICSharpCode.NRefactory.CSharp.Resolver.CSharpAstResolver..ctor(ICompilation compilation, CompilationUnit compilationUnit, CSharpParsedFile parsedFile)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.SetSemanticElement(PropertyDeclaration propertyDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 122
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitPropertyDeclaration(PropertyDeclaration propertyDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 109
+   at ICSharpCode.NRefactory.CSharp.PropertyDeclaration.AcceptVisitor(IAstVisitor visitor)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitChildren(AstNode node)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitTypeDeclaration(TypeDeclaration typeDeclaration)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitTypeDeclaration(TypeDeclaration typeDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 88
+   at ICSharpCode.NRefactory.CSharp.TypeDeclaration.AcceptVisitor(IAstVisitor visitor)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitChildren(AstNode node)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitCompilationUnit(CompilationUnit unit)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitCompilationUnit(CompilationUnit unit) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 190
+   at ICSharpCode.NRefactory.CSharp.CompilationUnit.AcceptVisitor(IAstVisitor visitor)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 65
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 24
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+
+07-17 12:18:00 | [Error] | CSharp2Knockout.Controllers.HomeController
+IP: [::1 | ::1],browser: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.41 Safari/537.1
+referer: http://localhost:9843/
+Thread: 29 | User: auth:NTLM:Gutek-PC\Gutek | ControllerActionInvoker.InvokeExceptionFilters => Controller.System.Web.Mvc.IExceptionFilter.OnException => HomeController.OnException 
+ Error occured on controller, handling it as AjaxResult 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.SetSemanticElement(PropertyDeclaration propertyDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 134
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitPropertyDeclaration(PropertyDeclaration propertyDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 111
+   at ICSharpCode.NRefactory.CSharp.PropertyDeclaration.AcceptVisitor(IAstVisitor visitor)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitChildren(AstNode node)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitTypeDeclaration(TypeDeclaration typeDeclaration)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitTypeDeclaration(TypeDeclaration typeDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 90
+   at ICSharpCode.NRefactory.CSharp.TypeDeclaration.AcceptVisitor(IAstVisitor visitor)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitChildren(AstNode node)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitCompilationUnit(CompilationUnit unit)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitCompilationUnit(CompilationUnit unit) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 190
+   at ICSharpCode.NRefactory.CSharp.CompilationUnit.AcceptVisitor(IAstVisitor visitor)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 67
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 24
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+
+07-17 12:23:58 | [Error] | CSharp2Knockout.Controllers.HomeController
+IP: [::1 | ::1],browser: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.41 Safari/537.1
+referer: http://localhost:9843/
+Thread: 34 | User: auth:NTLM:Gutek-PC\Gutek | ControllerActionInvoker.InvokeExceptionFilters => Controller.System.Web.Mvc.IExceptionFilter.OnException => HomeController.OnException 
+ Error occured on controller, handling it as AjaxResult 
+System.MissingMethodException: Cannot create an abstract class.
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean skipCheckThis, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.SetSemanticElement(PropertyDeclaration propertyDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 142
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitPropertyDeclaration(PropertyDeclaration propertyDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 111
+   at ICSharpCode.NRefactory.CSharp.PropertyDeclaration.AcceptVisitor(IAstVisitor visitor)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitChildren(AstNode node)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitTypeDeclaration(TypeDeclaration typeDeclaration)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitTypeDeclaration(TypeDeclaration typeDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 90
+   at ICSharpCode.NRefactory.CSharp.TypeDeclaration.AcceptVisitor(IAstVisitor visitor)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitChildren(AstNode node)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitCompilationUnit(CompilationUnit unit)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitCompilationUnit(CompilationUnit unit) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 199
+   at ICSharpCode.NRefactory.CSharp.CompilationUnit.AcceptVisitor(IAstVisitor visitor)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 67
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 24
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+
+07-17 12:54:41 | [Error] | CSharp2Knockout.Controllers.HomeController
+IP: [::1 | ::1],browser: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.41 Safari/537.1
+referer: http://localhost:9843/
+Thread: 8 | User: auth:NTLM:Gutek-PC\Gutek | ControllerActionInvoker.InvokeExceptionFilters => Controller.System.Web.Mvc.IExceptionFilter.OnException => HomeController.OnException 
+ Error occured on controller, handling it as AjaxResult 
+System.MissingMethodException: No parameterless constructor defined for this object.
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean skipCheckThis, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.<SetSemanticElement>b__4(IType t) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 135
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.SetSemanticElement(PropertyDeclaration propertyDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 154
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitPropertyDeclaration(PropertyDeclaration propertyDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 111
+   at ICSharpCode.NRefactory.CSharp.PropertyDeclaration.AcceptVisitor(IAstVisitor visitor)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitChildren(AstNode node)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitTypeDeclaration(TypeDeclaration typeDeclaration)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitTypeDeclaration(TypeDeclaration typeDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 90
+   at ICSharpCode.NRefactory.CSharp.TypeDeclaration.AcceptVisitor(IAstVisitor visitor)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitChildren(AstNode node)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitCompilationUnit(CompilationUnit unit)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitCompilationUnit(CompilationUnit unit) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 209
+   at ICSharpCode.NRefactory.CSharp.CompilationUnit.AcceptVisitor(IAstVisitor visitor)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 67
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 24
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+
+07-17 16:57:12 | [Error] | CSharp2Knockout.Controllers.HomeController
+IP: [::1 | ::1],browser: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.41 Safari/537.1
+referer: http://localhost:9843/
+Thread: 8 | User: auth:NTLM:Gutek-PC\Gutek | ControllerActionInvoker.InvokeExceptionFilters => Controller.System.Web.Mvc.IExceptionFilter.OnException => HomeController.OnException 
+ Error occured on controller, handling it as AjaxResult 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.SetSemanticElement(PropertyDeclaration propertyDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 162
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitPropertyDeclaration(PropertyDeclaration propertyDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 115
+   at ICSharpCode.NRefactory.CSharp.PropertyDeclaration.AcceptVisitor(IAstVisitor visitor)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitChildren(AstNode node)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitTypeDeclaration(TypeDeclaration typeDeclaration)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitTypeDeclaration(TypeDeclaration typeDeclaration) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 93
+   at ICSharpCode.NRefactory.CSharp.TypeDeclaration.AcceptVisitor(IAstVisitor visitor)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitChildren(AstNode node)
+   at ICSharpCode.NRefactory.CSharp.DepthFirstAstVisitor.VisitCompilationUnit(CompilationUnit unit)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryVisitor.VisitCompilationUnit(CompilationUnit unit) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 224
+   at ICSharpCode.NRefactory.CSharp.CompilationUnit.AcceptVisitor(IAstVisitor visitor)
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 67
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 24
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+
+07-17 18:49:27 | [Error] | CSharp2Knockout.Controllers.HomeController
+IP: [::1 | ::1],browser: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.41 Safari/537.1
+referer: http://localhost:9843/
+Thread: 38 | User: auth:NTLM:Gutek-PC\Gutek | ControllerActionInvoker.InvokeExceptionFilters => Controller.System.Web.Mvc.IExceptionFilter.OnException => HomeController.OnException 
+ Error occured on controller, handling it as AjaxResult 
+System.IO.FileLoadException: Could not load file or assembly 'System.ComponentModel.DataAnnotations, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The handle is invalid. (Exception from HRESULT: 0x80070006 (E_HANDLE))
+File name: 'System.ComponentModel.DataAnnotations, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName)
+   at Newtonsoft.Json.Serialization.JsonTypeReflector.GetMetadataTypeAttributeType()
+   at Newtonsoft.Json.Serialization.JsonTypeReflector.GetAssociateMetadataTypeFromAttribute(Type type)
+   at Newtonsoft.Json.Utilities.ThreadSafeStore`2.AddValue(TKey key)
+   at Newtonsoft.Json.Utilities.ThreadSafeStore`2.Get(TKey key)
+   at Newtonsoft.Json.Serialization.JsonTypeReflector.GetAssociatedMetadataType(Type type)
+   at Newtonsoft.Json.Serialization.JsonTypeReflector.GetAttribute[T](Type type)
+   at Newtonsoft.Json.Serialization.JsonTypeReflector.GetAttribute[T](ICustomAttributeProvider attributeProvider)
+   at Newtonsoft.Json.Utilities.ThreadSafeStore`2.AddValue(TKey key)
+   at Newtonsoft.Json.Utilities.ThreadSafeStore`2.Get(TKey key)
+   at Newtonsoft.Json.Serialization.CachedAttributeGetter`1.GetAttribute(ICustomAttributeProvider type)
+   at Newtonsoft.Json.Serialization.JsonTypeReflector.GetJsonContainerAttribute(Type type)
+   at Newtonsoft.Json.Serialization.JsonTypeReflector.GetJsonObjectAttribute(Type type)
+   at Newtonsoft.Json.Serialization.DefaultContractResolver.CreateContract(Type objectType)
+   at Newtonsoft.Json.Serialization.DefaultContractResolver.ResolveContract(Type type)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.GetContractSafe(Object value)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value)
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value)
+   at Newtonsoft.Json.JsonSerializer.Serialize(JsonWriter jsonWriter, Object value)
+   at Newtonsoft.Json.JsonConvert.SerializeObject(Object value, Formatting formatting, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.SerializeObject(Object value, Formatting formatting)
+   at System.ObjectExtensions.ToFormattedJson(Object this) in D:\Projects\Gutek\CSharp2Knockout\src\Gutek.Common\Extensions\System.Object.cs:line 19
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 21
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+
+=== Pre-bind state information ===
+LOG: User = Gutek-PC\Gutek
+LOG: DisplayName = System.ComponentModel.DataAnnotations, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+ (Fully-specified)
+LOG: Appbase = file:///D:/Projects/Gutek/CSharp2Knockout/src/CSharp2Knockout/
+LOG: Initial PrivatePath = D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\bin
+Calling assembly : Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\web.config
+LOG: Using host configuration file: 
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Version redirect found in framework config: 3.5.0.0 redirected to 4.0.0.0.
+
+
+07-17 19:27:25 | [Error] | CSharp2Knockout.Controllers.HomeController
+IP: [::1 | ::1],browser: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+referer: http://localhost:9843/
+Thread: 7 | User: auth:NTLM:Gutek-PC\Gutek | ControllerActionInvoker.InvokeExceptionFilters => Controller.System.Web.Mvc.IExceptionFilter.OnException => HomeController.OnException 
+ Error occured on controller, handling it as AjaxResult 
+System.ArgumentException: Unsupported type: System.Int32[]. Use the JsonSerializer class to get the object's JSON representation.
+   at Newtonsoft.Json.JsonConvert.ToString(Object value)
+   at CSharp2Knockout.Services.KnockoutWritter.WritePropertyDefaultValue(SemanticElement semanticElement, JObject obj, Int32 identLevel) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 149
+   at CSharp2Knockout.Services.KnockoutWritter.WritePropertyDeclarationComplex(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 195
+   at CSharp2Knockout.Services.KnockoutWritter.WriteClassDeclaration(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 101
+   at CSharp2Knockout.Services.KnockoutWritter.Write(VisitorResult result, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 58
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 70
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 29
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+
+07-17 19:29:17 | [Error] | CSharp2Knockout.Controllers.HomeController
+IP: [::1 | ::1],browser: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+referer: http://localhost:9843/
+Thread: 5 | User: auth:NTLM:Gutek-PC\Gutek | ControllerActionInvoker.InvokeExceptionFilters => Controller.System.Web.Mvc.IExceptionFilter.OnException => HomeController.OnException 
+ Error occured on controller, handling it as AjaxResult 
+System.ArgumentException: Unsupported type: System.Int32[]. Use the JsonSerializer class to get the object's JSON representation.
+   at Newtonsoft.Json.JsonConvert.ToString(Object value)
+   at CSharp2Knockout.Services.KnockoutWritter.WritePropertyDefaultValue(SemanticElement semanticElement, JObject obj, Int32 identLevel) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 149
+   at CSharp2Knockout.Services.KnockoutWritter.WritePropertyDeclarationComplex(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 195
+   at CSharp2Knockout.Services.KnockoutWritter.WriteClassDeclaration(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 101
+   at CSharp2Knockout.Services.KnockoutWritter.Write(VisitorResult result, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 58
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 70
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 29
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+
+07-17 19:32:26 | [Error] | CSharp2Knockout.Controllers.HomeController
+IP: [::1 | ::1],browser: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+referer: http://localhost:9843/
+Thread: 22 | User: auth:NTLM:Gutek-PC\Gutek | ControllerActionInvoker.InvokeExceptionFilters => Controller.System.Web.Mvc.IExceptionFilter.OnException => HomeController.OnException 
+ Error occured on controller, handling it as AjaxResult 
+System.ArgumentException: Unsupported type: System.Int32[]. Use the JsonSerializer class to get the object's JSON representation.
+   at Newtonsoft.Json.JsonConvert.ToString(Object value)
+   at CSharp2Knockout.Services.KnockoutWritter.WritePropertyDefaultValue(SemanticElement semanticElement, Int32 identLevel) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 149
+   at CSharp2Knockout.Services.KnockoutWritter.WritePropertyDeclarationComplex(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 197
+   at CSharp2Knockout.Services.KnockoutWritter.WriteClassDeclaration(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 101
+   at CSharp2Knockout.Services.KnockoutWritter.Write(VisitorResult result, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 58
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 70
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 29
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+

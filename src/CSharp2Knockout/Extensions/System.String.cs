@@ -1,22 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
 using System.IO;
+using System.Linq;
 using System.Text;
-using ICSharpCode.NRefactory;
+using CSharp2Knockout.Services;
 using ICSharpCode.NRefactory.CSharp;
-using ICSharpCode.NRefactory.TypeSystem;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
 
 namespace CSharp2Knockout.Extensions
 {
     public static class StringExtensions
     {
-        public static object ToKnockout(this string @this, bool onlyPublic, bool publicGetter, bool includeEnums, bool includeDataIf)
+        public static object ToKnockout(this string @this, TranslateOptions options)
         {
             if(string.IsNullOrWhiteSpace(@this))
             {
@@ -47,52 +43,24 @@ namespace CSharp2Knockout.Extensions
                     };
                 }
 
-                var types = cu.GetUsableTypes(includeEnums);
+                var types = cu.GetUsableTypes(options.IncludeEnums.Value);
                 foreach(var type in types)
                 {
-                    var members = type.GetProperties(onlyPublic, publicGetter);
-                    dynamic expando = members.SetMembers();
-
-                    var serialized = JsonConvert.SerializeObject(expando, Formatting.Indented, new JsonSerializerSettings
+                    if(type.ClassType == ClassType.Enum)
                     {
-                        ContractResolver = new CamelCasePropertyNamesContractResolver()
-                        ,
-                        NullValueHandling = NullValueHandling.Include
-                        ,
-                        Converters = new List<JsonConverter>
-                        {
-                            new StringEnumConverter()
-                        }
-                    });
-
-                    JObject o = JObject.Parse(serialized);
-                    StringBuilder sb = new StringBuilder();
-                    sb.AppendFormat("var {0} = function (data) {{", type.Name);
-                    sb.AppendLine();
-                    sb.AppendLine("     var self = this;");
-                    sb.AppendLine();
-                    sb.AppendLine("     if (!data) {");
-                    sb.AppendLine("         data = { };");
-                    sb.AppendLine("     }");
-
-                    foreach(var item in o.Children())
-                    {
-                        sb.AppendLine();
-                        var property = item.ToObject<JProperty>();
-
-                        if(o[property.Name] is JArray)
-                        {
-                            sb.AppendFormat("   self.{0} = ko.observableArray(data.{0});", property.Name);
-                        }
-                        else
-                        {
-                            sb.AppendFormat("   self.{0} = ko.observable(data.{0});", property.Name);
-                        }
+                        var enumMembers = type.GetEnums();
+                        dynamic enumExpando = enumMembers.SetMembers(options.SortProps);
+                        string enumSerialized = JsonConvert.SerializeObject(enumExpando, Formatting.Indented, options.ToJsonSettings());
+                        result.AppendLine(enumSerialized.ToJsEnum(type.Name));
                     }
+                    else
+                    {
+                        var members = type.GetProperties(options.PublicOnly.Value, options.PublicGetter.Value).ToList();
 
-                    sb.AppendLine("};");
-
-                    result.AppendLine(sb.ToString());
+                        dynamic expando = members.SetMembers(options.SortProps);
+                        string serialized = JsonConvert.SerializeObject(expando, Formatting.Indented, options.ToJsonSettings());
+                        result.AppendLine(serialized.ToKnockoutViewModel(options, type.Name, expando as IDictionary<string, object>));
+                    }
                 }
 
                 return new
@@ -120,6 +88,81 @@ namespace CSharp2Knockout.Extensions
                    || @this.StartsWith("IList")
                    || @this.StartsWith("Collection")
                    || @this.StartsWith("ICollection");
+        }
+
+        public static string ToKnockoutViewModel(this string @this, TranslateOptions options, string name, IDictionary<string, object> orginal = null)
+        {
+            JObject o = JObject.Parse(@this);
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("var {0} = function (data) {{", name);
+            sb.AppendLine();
+            sb.AppendLine("\tvar self = this;");
+            sb.AppendLine();
+            sb.AppendLine("\tif (!data) {");
+            sb.AppendLine("\t\tdata = { };");
+            sb.AppendLine("\t}");
+            sb.AppendLine();
+
+            foreach(var item in o.Children())
+            {
+                var property = item.ToObject<JProperty>();
+                string key = property.Name;
+
+                if(orginal != null && options.CamelCase.Value && !options.ForceCamelCase.Value)
+                {
+                    var orginalKey = orginal
+                        .Where(x => x.Key.Equals(key, StringComparison.OrdinalIgnoreCase))
+                        .Select(x => x.Key)
+                        .FirstOrDefault();
+
+                    if(orginalKey.IsNotNullOrEmpty())
+                    {
+                        key = orginalKey;
+                    }
+                }
+
+                if(o[property.Name] is JArray)
+                {
+                    sb.AppendFormat("\tself.{0} = ko.observableArray(data.{1});", property.Name, key);
+
+                }
+                else
+                {
+                    sb.AppendFormat("\tself.{0} = ko.observable(data.{1});", property.Name, key);
+
+                }
+                sb.AppendLine();
+            }
+
+            sb.AppendLine("};");
+
+            return sb.ToString();
+        }
+
+        public static string ToJsEnum(this string @this, string name)
+        {
+            JObject o = JObject.Parse(@this);
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("var {0} = {{", name);
+            sb.AppendLine();
+
+            var children = o.Children().ToList();
+
+            for(int i = 0; i < children.Count; i++)
+            {
+                var property = children[i].ToObject<JProperty>();
+
+                sb.AppendFormat("\t{0}: '{1}'", property.Name, o[property.Name].Value<string>());
+                if(i + 1 < children.Count)
+                {
+                    sb.Append(",");
+                }
+                sb.AppendLine();
+            }
+
+            sb.AppendLine("};");
+
+            return sb.ToString();
         }
     }
 }

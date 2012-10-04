@@ -1,0 +1,1489 @@
+2012-07-19 13:22:12.0897|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+dfgsdfgsdfgsdgf 
+2012-07-19 13:22:12.1127|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+dfgsdfgsdfgsdgf 
+2012-07-19 13:22:12.1927|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<strong>Error</strong>: Unexpected symbol `dfgsdfgsdfgsdgf'"
+  ],
+  "Code": null
+} 
+2012-07-19 13:22:12.1927|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<strong>Error</strong>: Unexpected symbol `dfgsdfgsdfgsdgf'"
+  ],
+  "Code": null
+} 
+2012-07-19 13:24:18.5499|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test
+{
+	public string Ona = "test";
+} 
+2012-07-19 13:24:18.5749|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test
+{
+	public string Ona = "test";
+} 
+2012-07-19 13:24:19.1509|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": true,
+  "Message": "var Test = function (data) {\r\n\tvar self = this;\r\n\r\n\tif (!data) {\r\n\t\tdata = { };\r\n\t}\r\n\r\n};\r\n\r\n",
+  "Errors": [],
+  "Code": null
+} 
+2012-07-19 13:24:19.1509|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": true,
+  "Message": "var Test = function (data) {\r\n\tvar self = this;\r\n\r\n\tif (!data) {\r\n\t\tdata = { };\r\n\t}\r\n\r\n};\r\n\r\n",
+  "Errors": [],
+  "Code": null
+} 
+2012-07-19 13:37:36.2535|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test
+{
+	public string Ona = "test";
+	public string Ona1 { get; set; }
+	public string Ona2 { get; set; }
+} 
+2012-07-19 13:37:36.2615|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test
+{
+	public string Ona = "test";
+	public string Ona1 { get; set; }
+	public string Ona2 { get; set; }
+} 
+2012-07-19 13:37:36.8075|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": true,
+  "Message": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona1 = ko.observable(data.Ona1);\r\n    self.ona2 = ko.observable(data.Ona2);\r\n};\r\n",
+  "Errors": [],
+  "Code": null
+} 
+2012-07-19 13:37:36.8075|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": true,
+  "Message": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona1 = ko.observable(data.Ona1);\r\n    self.ona2 = ko.observable(data.Ona2);\r\n};\r\n",
+  "Errors": [],
+  "Code": null
+} 
+2012-07-19 13:38:42.7923|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test {
+  public int Ona {get;set;}
+} 
+2012-07-19 13:38:42.8003|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test {
+  public int Ona {get;set;}
+} 
+2012-07-19 13:38:43.1143|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": true,
+  "Message": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n};\r\n",
+  "Errors": [],
+  "Code": null
+} 
+2012-07-19 13:38:43.1143|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": true,
+  "Message": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n};\r\n",
+  "Errors": [],
+  "Code": null
+} 
+2012-07-19 13:39:01.6854|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test {
+  public int Ona {get;set;}
+  public X Test {get;set;}
+} 
+2012-07-19 13:39:01.6874|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test {
+  public int Ona {get;set;}
+  public X Test {get;set;}
+} 
+2012-07-19 13:39:01.6874|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<strong>Error</strong>: `Test.Test': member names cannot be the same as their enclosing type"
+  ],
+  "Code": null
+} 
+2012-07-19 13:39:01.6874|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<strong>Error</strong>: `Test.Test': member names cannot be the same as their enclosing type"
+  ],
+  "Code": null
+} 
+2012-07-19 13:39:06.5897|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test {
+  public int Ona {get;set;}
+  public X Test1 {get;set;}
+} 
+2012-07-19 13:39:06.5897|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test {
+  public int Ona {get;set;}
+  public X Test1 {get;set;}
+} 
+2012-07-19 13:39:06.8837|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": true,
+  "Message": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n    self.test1 = ko.observable(data.Test1);\r\n};\r\n",
+  "Errors": [],
+  "Code": null
+} 
+2012-07-19 13:39:06.8837|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": true,
+  "Message": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n    self.test1 = ko.observable(data.Test1);\r\n};\r\n",
+  "Errors": [],
+  "Code": null
+} 
+2012-07-19 13:39:15.8202|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test {
+  public int Ona {get;set;}
+  public X Test1 {get;set;}
+} 
+2012-07-19 13:39:15.8212|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test {
+  public int Ona {get;set;}
+  public X Test1 {get;set;}
+} 
+2012-07-19 13:39:27.7549|DEBUG|CSharp2Knockout.Controllers.HomeController|Handling exception on Controller 
+2012-07-19 13:39:27.7559|ERROR|CSharp2Knockout.Controllers.HomeController|Error occured on controller, handling it as AjaxResult System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   at System.Text.StringBuilder.AppendFormat(String format, Object arg0)
+   at CSharp2Knockout.Services.KnockoutWritter.WritePropertyDeclarationComplex(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 204
+   at CSharp2Knockout.Services.KnockoutWritter.WriteClassDeclaration(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 108
+   at CSharp2Knockout.Services.KnockoutWritter.Write(VisitorResult result, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 59
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 70
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 29
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2012-07-19 13:41:05.1685|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 13:41:05.1685|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 13:41:20.5083|DEBUG|CSharp2Knockout.Controllers.HomeController|Handling exception on Controller 
+2012-07-19 13:41:33.3411|ERROR|CSharp2Knockout.Controllers.HomeController|Error occured on controller, handling it as AjaxResult System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   at System.Text.StringBuilder.AppendFormat(String format, Object arg0)
+   at CSharp2Knockout.Services.KnockoutWritter.WritePropertyDeclarationComplex(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 204
+   at CSharp2Knockout.Services.KnockoutWritter.WriteClassDeclaration(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 108
+   at CSharp2Knockout.Services.KnockoutWritter.Write(VisitorResult result, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 59
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 70
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 29
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2012-07-19 13:42:45.5782|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 13:42:45.5782|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 13:42:45.8572|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": true,
+  "Message": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n    self.xa = ko.observable(data.Xa);\r\n};\r\n",
+  "Errors": [],
+  "Code": null
+} 
+2012-07-19 13:42:45.8572|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": true,
+  "Message": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n    self.xa = ko.observable(data.Xa);\r\n};\r\n",
+  "Errors": [],
+  "Code": null
+} 
+2012-07-19 13:42:58.0839|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 13:42:58.0839|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 13:43:05.2583|DEBUG|CSharp2Knockout.Controllers.HomeController|Handling exception on Controller 
+2012-07-19 13:43:05.2583|ERROR|CSharp2Knockout.Controllers.HomeController|Error occured on controller, handling it as AjaxResult System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   at System.Text.StringBuilder.AppendFormat(String format, Object arg0)
+   at CSharp2Knockout.Services.KnockoutWritter.WritePropertyDeclarationComplex(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 204
+   at CSharp2Knockout.Services.KnockoutWritter.WriteClassDeclaration(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 108
+   at CSharp2Knockout.Services.KnockoutWritter.Write(VisitorResult result, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 59
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 70
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 29
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2012-07-19 13:45:03.5191|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 13:45:03.5381|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 13:45:03.8251|DEBUG|CSharp2Knockout.Controllers.HomeController|Handling exception on Controller 
+2012-07-19 13:45:03.8251|ERROR|CSharp2Knockout.Controllers.HomeController|Error occured on controller, handling it as AjaxResult System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   at System.Text.StringBuilder.AppendFormat(String format, Object arg0)
+   at CSharp2Knockout.Services.KnockoutWritter.WritePropertyDeclarationComplex(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 204
+   at CSharp2Knockout.Services.KnockoutWritter.WriteClassDeclaration(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 108
+   at CSharp2Knockout.Services.KnockoutWritter.Write(VisitorResult result, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 59
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 70
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 29
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2012-07-19 13:45:25.6664|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;
+  
+} 
+2012-07-19 13:45:25.6684|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;
+  
+} 
+2012-07-19 13:45:25.6684|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<strong>Error</strong>: Unexpected symbol `end-of-file'"
+  ],
+  "Code": null
+} 
+2012-07-19 13:45:25.6684|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<strong>Error</strong>: Unexpected symbol `end-of-file'"
+  ],
+  "Code": null
+} 
+2012-07-19 13:45:38.3151|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;
+  
+} 
+2012-07-19 13:45:38.3231|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;
+  
+} 
+2012-07-19 13:47:24.8112|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<strong>Error</strong>: Unexpected symbol `end-of-file'"
+  ],
+  "Code": null
+} 
+2012-07-19 13:47:24.8112|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<strong>Error</strong>: Unexpected symbol `end-of-file'"
+  ],
+  "Code": null
+} 
+2012-07-19 13:50:51.6790|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {Get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 13:50:51.7300|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {Get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 13:50:51.8640|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<strong>Error</strong>: A get or set accessor expected"
+  ],
+  "Code": null
+} 
+2012-07-19 13:50:51.8640|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<strong>Error</strong>: A get or set accessor expected"
+  ],
+  "Code": null
+} 
+2012-07-19 14:08:06.1092|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {Get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:08:06.1262|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {Get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:08:06.2122|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:08:06.2122|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:09:01.6834|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {Get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:09:01.6904|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {Get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:09:01.6904|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:09:01.6904|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:13:08.1244|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {Get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:13:08.1244|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {Get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:13:08.1244|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:13:08.1244|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:16:23.0446|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:16:23.0446|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:16:23.5656|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": true,
+  "Message": null,
+  "Errors": [],
+  "Warnings": [],
+  "Code": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n    self.xa = ko.observable(data.Xa);\r\n};\r\n"
+} 
+2012-07-19 14:16:23.5656|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": true,
+  "Message": null,
+  "Errors": [],
+  "Warnings": [],
+  "Code": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n    self.xa = ko.observable(data.Xa);\r\n};\r\n"
+} 
+2012-07-19 14:17:38.6399|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {GET;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:17:38.6399|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {GET;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:17:38.6399|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:17:38.6399|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:18:57.8765|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {GET;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:18:57.8765|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {GET;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:18:57.8785|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:18:57.8785|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:19:57.2918|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {GET;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:19:57.2998|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {GET;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:19:57.2998|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:19:57.2998|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:20:15.4959|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {GET;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:20:15.4959|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {GET;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:20:15.4959|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:20:15.4959|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:20:25.4615|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {GET;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:20:25.4615|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {GET;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:20:25.4615|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:20:25.4615|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": false,
+  "Message": "Error parsing code file.",
+  "Errors": [
+    "<a data-line=\"3\" href=\"javascript:void(0)\">Line 3</a>: A get or set accessor expected"
+  ],
+  "Warnings": [],
+  "Code": null
+} 
+2012-07-19 14:20:33.1699|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:20:33.1699|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:20:36.1751|DEBUG|CSharp2Knockout.Controllers.HomeController|Handling exception on Controller 
+2012-07-19 14:20:36.1751|ERROR|CSharp2Knockout.Controllers.HomeController|Error occured on controller, handling it as AjaxResult System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   at System.Text.StringBuilder.AppendFormat(String format, Object arg0)
+   at CSharp2Knockout.Services.KnockoutWritter.WritePropertyDeclarationComplex(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 204
+   at CSharp2Knockout.Services.KnockoutWritter.WriteClassDeclaration(TypeResult type) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 108
+   at CSharp2Knockout.Services.KnockoutWritter.Write(VisitorResult result, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\KnockoutWritter.cs:line 59
+   at CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion.ToKnockoutVm(String code, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Services\NRefactory\NRefactoryCodeConvertion.cs:line 69
+   at CSharp2Knockout.Controllers.HomeController.Index(String csharp, TranslateOptions options) in D:\Projects\Gutek\CSharp2Knockout\src\CSharp2Knockout\Controllers\HomeController.cs:line 29
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2012-07-19 14:21:33.3193|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:21:33.3743|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:21:34.0004|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": true,
+  "Message": null,
+  "Errors": [],
+  "Warnings": [],
+  "Code": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (data) {\r\n        self.ona = ko.observable(data.Ona);\r\n        self.xa = ko.observable(data.Xa);\r\n    } else {\r\n        self.ona = ko.observable(0);\r\n        self.xa = ko.observable();\r\n    }\r\n\n};\r\n"
+} 
+2012-07-19 14:21:34.0004|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": true,
+  "Message": null,
+  "Errors": [],
+  "Warnings": [],
+  "Code": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (data) {\r\n        self.ona = ko.observable(data.Ona);\r\n        self.xa = ko.observable(data.Xa);\r\n    } else {\r\n        self.ona = ko.observable(0);\r\n        self.xa = ko.observable();\r\n    }\r\n\n};\r\n"
+} 
+2012-07-19 14:22:28.1915|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:22:28.2005|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": true,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+} 
+2012-07-19 14:22:28.8425|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": true,
+  "Message": null,
+  "Errors": [],
+  "Warnings": [],
+  "Code": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (data) {\r\n        self.ona = ko.observable(data.Ona);\r\n        self.xa = ko.observable(data.Xa);\r\n    } else {\r\n        self.ona = ko.observable(0);\r\n        self.xa = ko.observable();\r\n    }\r\n};\r\n"
+} 
+2012-07-19 14:22:28.8425|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": true,
+  "Message": null,
+  "Errors": [],
+  "Warnings": [],
+  "Code": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (data) {\r\n        self.ona = ko.observable(data.Ona);\r\n        self.xa = ko.observable(data.Xa);\r\n    } else {\r\n        self.ona = ko.observable(0);\r\n        self.xa = ko.observable();\r\n    }\r\n};\r\n"
+} 
+2012-07-19 14:27:06.3694|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "IncludeEmptyType": false,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+}
+
+public class Baaa {
+} 
+2012-07-19 14:27:06.3864|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "IncludeEmptyType": false,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+}
+
+public class Baaa {
+} 
+2012-07-19 14:27:06.9684|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": true,
+  "Message": null,
+  "Errors": [],
+  "Warnings": [],
+  "Code": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n    self.xa = ko.observable(data.Xa);\r\n};\r\n"
+} 
+2012-07-19 14:27:06.9684|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": true,
+  "Message": null,
+  "Errors": [],
+  "Warnings": [],
+  "Code": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n    self.xa = ko.observable(data.Xa);\r\n};\r\n"
+} 
+2012-07-19 14:27:11.8777|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "IncludeEmptyType": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}, class to convert:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+}
+
+public class Baaa {
+} 
+2012-07-19 14:27:11.8777|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Converting code to Knockout VM. Options:
+{
+  "PublicOnly": true,
+  "IncludeEmptyType": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false,
+  "UseCamelCaseForKo": true,
+  "UseCamelCaseForAll": false
+}
+Code:
+public class Test{
+  
+  public int Ona {get;set;}
+  public X Xa {get;set;}
+  
+}
+
+public class Baaa {
+} 
+2012-07-19 14:27:12.1657|DEBUG|CSharp2Knockout.Services.NRefactory.NRefactoryCodeConvertion|Returning Convertion Result: {
+  "Success": true,
+  "Message": null,
+  "Errors": [],
+  "Warnings": [],
+  "Code": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n    self.xa = ko.observable(data.Xa);\r\n};\r\n\nvar Baaa = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n};\r\n"
+} 
+2012-07-19 14:27:12.1657|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "Success": true,
+  "Message": null,
+  "Errors": [],
+  "Warnings": [],
+  "Code": "var Test = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n    self.ona = ko.observable(data.Ona);\r\n    self.xa = ko.observable(data.Xa);\r\n};\r\n\nvar Baaa = function (data) {\r\n    var self = this;\r\n\n    if (!data) {\r\n        data = { };\r\n    }\r\n\n};\r\n"
+} 

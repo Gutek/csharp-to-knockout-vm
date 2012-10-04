@@ -9,7 +9,7 @@
 
     'use strict';
 
-    String.prototype.format = function () {
+    String.prototype.formatWith = function () {
         var str = this, i;
         for (i = 0; i < arguments.length; i++) {
             str = str.replace('{' + i + '}', arguments[i]);
@@ -100,7 +100,7 @@
                 return 'alert-' + baseType;
             };
 
-            msg = msg.format(alertType(type), permanent(options.permanent), options.title, options.message);
+            msg = msg.formatWith(alertType(type), permanent(options.permanent), options.title, options.message);
 
             return msg;
         };
@@ -146,27 +146,45 @@
         };
     })();
 
-    var findoutTimeout, getErros;
+    var findoutTimeout, getErros, globalCount = 0, editor;
 
     getErros = function (data) {
         var errors = '';
 
         if (!data.success && data.message) {
-            errors += data.message;
+            errors += '<p>' + data.message + '</p>';
         } else {
-            errors += 'Errors or Warning had occured during parsing:';
+            errors += '<p>Errors or Warnings occured during parsing:</p>';
         }
 
-        errors += '<ul>';
+        if (data.errors && data.errors.length) {
 
-        $.each(data.errors, function (idx, item) {
-            errors += '<li>';
-            errors += item;
-            errors += '</li>';
-        });
+            errors += '<h4 style="padding-top: 5px">Errors:</h4>';
+            errors += '<ul>';
 
-        errors += '</ul>';
+            $.each(data.errors, function (idx, item) {
+                errors += '<li>';
+                errors += item;
+                errors += '</li>';
+            });
 
+            errors += '</ul>';
+        }
+        
+        if (data.warnings && data.warnings.length) {
+
+            errors += '<h4>Warnings:</h4>';
+            errors += '<ul>';
+
+            $.each(data.warnings, function (idx, item) {
+                errors += '<li>';
+                errors += item;
+                errors += '</li>';
+            });
+
+            errors += '</ul>';
+        }
+        
         return errors;
     };
 
@@ -177,19 +195,30 @@
 
         $this.button('loading');
 
-        var code = $.trim($("#csharp").val()),
+        var code = editor.getValue(),
+            //code = $.trim($("#csharp").val()),
             loading = $('#loading'),
-            url = $this.data().url, post,
+            url = $this.data().url,
             includeEnums = $('#includeEnums').is(":checked"),
             publicOnly = $('#publicOnly').is(":checked"),
             publicGetter = $('#publicGetter').is(":checked"),
-            dataIf = $('#dataIf').is(":checked"),
+            includeDefaultData = $('#includeDefaultData').is(":checked"),
+            camelCase = $('#camelCase').is(":checked"),
+            sortProps = $('#sortProps').is(":checked"),
+            forceCamelCase = $('#forceCamelCase').is(":checked"),
+            includeEmptyType = $('#includeEmptyType').is(":checked"),
             model = {
                 csharp: code,
-                onlyPublic: publicOnly,
-                publicGetter: publicGetter,
-                includeEnums: includeEnums,
-                includeDataIf: dataIf
+                options: {
+                    publicOnly: publicOnly,
+                    publicGetter: publicGetter,
+                    includeEnums: includeEnums,
+                    includeDefaultData: includeDefaultData,
+                    camelCase: camelCase,
+                    forceCamelCase: forceCamelCase,
+                    includeEmptyType: includeEmptyType,
+                    sortProps: sortProps
+                }
             };
 
 
@@ -207,36 +236,64 @@
 
         loading.show();
 
-        post = $.post(url, model, function (data) {
-            var vm = '', errors = '', temp;
-            if (!data.success) {
-                Alerts.msg.error(getErros(data), ' ');
-                return;
+        $.ajax({
+            type: 'POST',
+            url: url,
+            dataType: 'json',
+            data: JSON.stringify(model),
+            contentType: 'application/json; charset=utf-8',
+            success: function (data) {
+                var vm = '', errors = '', temp;
+                if (!data.success) {
+                    Alerts.msg.error(getErros(data), 'Convertion failed');
+                    return;
+                }
+
+                if (!data.code) {
+                    Alerts.msg.warn('No code returned - it could be an problem with options - i.e. you have selected only public properties but you do not have any public properties.', 'Warning');
+                    return;
+                }
+
+                temp = prettyPrintOne(data.code, 'js', true);
+
+                vm += '<pre class="prettyprint linenums">';
+                vm += temp;
+                vm += '</pre>';
+
+                if (data.errors.length || data.warnings.length) {
+                    Alerts.msg.error(getErros(data), ' ');
+                }
+                globalCount += 1;
+
+                Alerts.msg.info(vm, 'Result: #' + globalCount);
+            },
+            complete: function () {
+                $this.button('reset');
+                $this.button('toggle');
+                loading.hide();
             }
-
-            temp = prettyPrintOne(data.message, 'js', true);
-
-            vm += '<pre class="prettyprint linenums">';
-            vm += temp;
-            vm += '</pre>';
-
-            if (data.errors && data.errors.length) {
-                Alerts.msg.error(getErros(data), ' ');
-            }
-
-            Alerts.msg.info(vm, ' ');
-            //prettyPrint();
-        });
-
-        post.complete(function () {
-            $this.button('reset');
-            $this.button('toggle');
-            loading.hide();
         });
 
     });
 
     $('[rel=popover]').popover();
+
+    $('a[data-line]').live('click', function (ev) {
+        var line = $(ev.target).attr('data-line') - 1;
+        var str = editor.getLine(line);
+
+        editor.setSelection({ line: line, ch: 0 }, { line: line, ch: str.length });
+        scrollTo(0, 0);
+    });
+
+    editor = CodeMirror.fromTextArea($('#csharp')[0], {
+        theme: 'default',
+        lineNumbers: true,
+        mode: 'text/x-csharp'
+    });
+
+    editor.focus();
+    editor.setSelection({ line: 0, ch: 0 }, { line: 0, ch: 23 }); 
 
     window.Allerts = Alerts.msg;
 

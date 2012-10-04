@@ -1,0 +1,236 @@
+2012-07-13 12:25:54.8416|ERROR|CSharp2Knockout.MvcApplication|Unhandled error System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<BeginProcessRequest>b__2()
+   at System.Web.Mvc.SecurityUtil.<>c__DisplayClassb`1.<ProcessInApplicationTrust>b__a()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust[TResult](Func`1 func)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2012-07-13 12:26:36.1273|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false
+}, class to convert:
+namespace CSharp2Knockout.Models
+{
+    public class TranslateOptions
+    {
+        private bool? _publicOnly;
+        public bool? PublicOnly
+        {
+            get { return _publicOnly.HasValue && _publicOnly.Value; }
+            set { _publicOnly = value; }
+        }
+
+        private bool? _publicGetter;
+        public bool? PublicGetter
+        {
+            get { return _publicGetter.HasValue && _publicGetter.Value; }
+            set { _publicGetter = value; }
+        }
+
+        private bool? _includeEnums;
+        public bool? IncludeEnums
+        {
+            get { return !_includeEnums.HasValue || _includeEnums.Value; }
+            set { _includeEnums = value; }
+        }
+
+        private bool? _includeDefaultData;
+        public bool? IncludeDefaultData
+        {
+            get { return _includeDefaultData.HasValue && _includeDefaultData.Value; }
+            set { _includeDefaultData = value; }
+        }
+        private bool? _sortProps;
+        public bool? SortProps
+        {
+            get { return _sortProps.HasValue && _sortProps.Value; }
+            set { _sortProps = value; }
+        }
+
+        private bool? _camelCase;
+        public bool? CamelCase
+        {
+            get
+            {
+                return !_camelCase.HasValue || _camelCase.Value;
+            }
+            set { _camelCase = value; }
+        }
+
+        private bool? _forceCamelCase;
+        public bool? ForceCamelCase
+        {
+            get
+            {
+                return _forceCamelCase.HasValue && _forceCamelCase.Value;
+            }
+            set { _forceCamelCase = value; }
+        }
+    }
+} 
+2012-07-13 12:26:36.2983|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "success": true,
+  "message": "var TranslateOptions = function (data) {\r\n\tvar self = this;\r\n\r\n\tif (!data) {\r\n\t\tdata = { };\r\n\t}\r\n\r\n\tself.publicOnly = ko.observable(data.PublicOnly);\r\n\tself.publicGetter = ko.observable(data.PublicGetter);\r\n\tself.includeEnums = ko.observable(data.IncludeEnums);\r\n\tself.includeDefaultData = ko.observable(data.IncludeDefaultData);\r\n\tself.sortProps = ko.observable(data.SortProps);\r\n\tself.camelCase = ko.observable(data.CamelCase);\r\n\tself.forceCamelCase = ko.observable(data.ForceCamelCase);\r\n};\r\n\r\n",
+  "errors": []
+} 
+2012-07-13 12:26:46.0619|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": true,
+  "CamelCase": true,
+  "ForceCamelCase": false
+}, class to convert:
+namespace CSharp2Knockout.Models
+{
+    public class TranslateOptions
+    {
+        private bool? _publicOnly;
+        public bool? PublicOnly
+        {
+            get { return _publicOnly.HasValue && _publicOnly.Value; }
+            set { _publicOnly = value; }
+        }
+
+        private bool? _publicGetter;
+        public bool? PublicGetter
+        {
+            get { return _publicGetter.HasValue && _publicGetter.Value; }
+            set { _publicGetter = value; }
+        }
+
+        private bool? _includeEnums;
+        public bool? IncludeEnums
+        {
+            get { return !_includeEnums.HasValue || _includeEnums.Value; }
+            set { _includeEnums = value; }
+        }
+
+        private bool? _includeDefaultData;
+        public bool? IncludeDefaultData
+        {
+            get { return _includeDefaultData.HasValue && _includeDefaultData.Value; }
+            set { _includeDefaultData = value; }
+        }
+        private bool? _sortProps;
+        public bool? SortProps
+        {
+            get { return _sortProps.HasValue && _sortProps.Value; }
+            set { _sortProps = value; }
+        }
+
+        private bool? _camelCase;
+        public bool? CamelCase
+        {
+            get
+            {
+                return !_camelCase.HasValue || _camelCase.Value;
+            }
+            set { _camelCase = value; }
+        }
+
+        private bool? _forceCamelCase;
+        public bool? ForceCamelCase
+        {
+            get
+            {
+                return _forceCamelCase.HasValue && _forceCamelCase.Value;
+            }
+            set { _forceCamelCase = value; }
+        }
+    }
+} 
+2012-07-13 12:26:46.0619|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "success": true,
+  "message": "var TranslateOptions = function (data) {\r\n\tvar self = this;\r\n\r\n\tif (!data) {\r\n\t\tdata = { };\r\n\t}\r\n\r\n\tself.camelCase = ko.observable(data.CamelCase);\r\n\tself.forceCamelCase = ko.observable(data.ForceCamelCase);\r\n\tself.includeDefaultData = ko.observable(data.IncludeDefaultData);\r\n\tself.includeEnums = ko.observable(data.IncludeEnums);\r\n\tself.publicGetter = ko.observable(data.PublicGetter);\r\n\tself.publicOnly = ko.observable(data.PublicOnly);\r\n\tself.sortProps = ko.observable(data.SortProps);\r\n};\r\n\r\n",
+  "errors": []
+} 
+2012-07-13 12:26:53.3203|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": true,
+  "CamelCase": true,
+  "ForceCamelCase": true
+}, class to convert:
+namespace CSharp2Knockout.Models
+{
+    public class TranslateOptions
+    {
+        private bool? _publicOnly;
+        public bool? PublicOnly
+        {
+            get { return _publicOnly.HasValue && _publicOnly.Value; }
+            set { _publicOnly = value; }
+        }
+
+        private bool? _publicGetter;
+        public bool? PublicGetter
+        {
+            get { return _publicGetter.HasValue && _publicGetter.Value; }
+            set { _publicGetter = value; }
+        }
+
+        private bool? _includeEnums;
+        public bool? IncludeEnums
+        {
+            get { return !_includeEnums.HasValue || _includeEnums.Value; }
+            set { _includeEnums = value; }
+        }
+
+        private bool? _includeDefaultData;
+        public bool? IncludeDefaultData
+        {
+            get { return _includeDefaultData.HasValue && _includeDefaultData.Value; }
+            set { _includeDefaultData = value; }
+        }
+        private bool? _sortProps;
+        public bool? SortProps
+        {
+            get { return _sortProps.HasValue && _sortProps.Value; }
+            set { _sortProps = value; }
+        }
+
+        private bool? _camelCase;
+        public bool? CamelCase
+        {
+            get
+            {
+                return !_camelCase.HasValue || _camelCase.Value;
+            }
+            set { _camelCase = value; }
+        }
+
+        private bool? _forceCamelCase;
+        public bool? ForceCamelCase
+        {
+            get
+            {
+                return _forceCamelCase.HasValue && _forceCamelCase.Value;
+            }
+            set { _forceCamelCase = value; }
+        }
+    }
+} 
+2012-07-13 12:26:53.3213|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "success": true,
+  "message": "var TranslateOptions = function (data) {\r\n\tvar self = this;\r\n\r\n\tif (!data) {\r\n\t\tdata = { };\r\n\t}\r\n\r\n\tself.camelCase = ko.observable(data.camelCase);\r\n\tself.forceCamelCase = ko.observable(data.forceCamelCase);\r\n\tself.includeDefaultData = ko.observable(data.includeDefaultData);\r\n\tself.includeEnums = ko.observable(data.includeEnums);\r\n\tself.publicGetter = ko.observable(data.publicGetter);\r\n\tself.publicOnly = ko.observable(data.publicOnly);\r\n\tself.sortProps = ko.observable(data.sortProps);\r\n};\r\n\r\n",
+  "errors": []
+} 

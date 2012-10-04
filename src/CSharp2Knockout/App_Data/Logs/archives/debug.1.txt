@@ -1,0 +1,75 @@
+2012-07-16 20:53:14.4347|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false
+}, class to convert:
+class Tesstaaa {
+   public MojaMama Aaa {get;set;}
+} 
+2012-07-16 20:55:11.1043|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "success": true,
+  "message": "var Tesstaaa = function (data) {\r\n\tvar self = this;\r\n\r\n\tif (!data) {\r\n\t\tdata = { };\r\n\t}\r\n\r\n\tself.aaa = ko.observable(data.Aaa);\r\n};\r\n\r\n",
+  "errors": []
+} 
+2012-07-16 20:55:21.9099|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false
+}, class to convert:
+class Tesstaaa {
+   public MojaMama Aaa {get;set;}
+   public int Csss {get;set;}
+} 
+2012-07-16 20:56:35.6852|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "success": true,
+  "message": "var Tesstaaa = function (data) {\r\n\tvar self = this;\r\n\r\n\tif (!data) {\r\n\t\tdata = { };\r\n\t}\r\n\r\n\tself.aaa = ko.observable(data.Aaa);\r\n\tself.csss = ko.observable(data.Csss);\r\n};\r\n\r\n",
+  "errors": []
+} 
+2012-07-16 20:57:38.9358|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false
+}, class to convert:
+class Tesstaaa {
+   public MojaMama Aaa {get;set;}
+   public int Csss {get;set;}
+} 
+2012-07-16 20:58:02.5321|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "success": true,
+  "message": "var Tesstaaa = function (data) {\r\n\tvar self = this;\r\n\r\n\tif (!data) {\r\n\t\tdata = { };\r\n\t}\r\n\r\n\tself.aaa = ko.observable(data.Aaa);\r\n\tself.csss = ko.observable(data.Csss);\r\n};\r\n\r\n",
+  "errors": []
+} 
+2012-07-16 20:58:15.2859|DEBUG|CSharp2Knockout.Controllers.HomeController|Starting converting class with options: {
+  "PublicOnly": true,
+  "PublicGetter": true,
+  "IncludeEnums": false,
+  "IncludeDefaultData": false,
+  "SortProps": false,
+  "CamelCase": true,
+  "ForceCamelCase": false
+}, class to convert:
+class Tesstaaa {
+   public MojaMama Aaa {get;set;}
+   public int Csss {get;set;}
+} 
+2012-07-16 21:02:37.9759|DEBUG|CSharp2Knockout.Controllers.HomeController|Returning converted class:
+{
+  "success": true,
+  "message": "var Tesstaaa = function (data) {\r\n\tvar self = this;\r\n\r\n\tif (!data) {\r\n\t\tdata = { };\r\n\t}\r\n\r\n\tself.aaa = ko.observable(data.Aaa);\r\n\tself.csss = ko.observable(data.Csss);\r\n};\r\n\r\n",
+  "errors": []
+} 
