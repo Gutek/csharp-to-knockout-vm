@@ -318,7 +318,7 @@ namespace CSharp2Knockout.Services.NRefactory
                 return true;
             }
 
-            if(type.DirectBaseTypes.Any(x => x.Namespace == "System.Collections.Generic"))
+            if(type.DirectBaseTypes.Any(x => x.Namespace == "System.Collections.Generic" || x.FullName == "System.Collections.IEnumerable"))
             {
                 return true;
             }
